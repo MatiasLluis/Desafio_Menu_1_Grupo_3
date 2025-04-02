@@ -7,6 +7,10 @@ using System.Collections;
 /// </summary>
 public class Table
 {
+    public int Number { get; set; }
+    public bool IsOccupied { get; set; }
+    public list List<Dish> Order { get; set; }
+    
     private ArrayList order = new ArrayList();
     public bool HasOrders()
     {
