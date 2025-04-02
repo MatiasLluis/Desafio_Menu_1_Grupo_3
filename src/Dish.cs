@@ -7,10 +7,10 @@ public class Dish
 
 {
     public string Name { get; set; }
-    public int Price { get; set; }
-    public string IsVegetarian { get; set; }
+    public double Price { get; set; }
+    public bool IsVegetarian { get; set; }
 
-    public Dish (string Name, int Price, string IsVegetarian)
+    public Dish (string Name, double Price, bool IsVegetarian)
     {
         Name = Name; 
         Price = Price;
