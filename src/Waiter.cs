@@ -7,18 +7,21 @@ namespace Ucu.Poo.Restaurant;
 /// </summary>
 public class Waiter
 {
-    public string Nombre_mozo { get; set; }
+    public string Name { get; set; }
     
     private ArrayList assignedTables = new ArrayList();
-
+    public Waiter(string name)
+    {
+        this.Name = name;
+    }
     public void assign_table(Table table)
     {
-        String mesa_asignada = "";
-        for (int i = 0; i < Table.Count)
-        {
-            
-        }
+        assignedTables.Add(table);
+    }
+
+    public void TakeOrder(Table table, Dish dish)
+    {
+        table.AddToOrder(dish);
     }
     
 }
-
