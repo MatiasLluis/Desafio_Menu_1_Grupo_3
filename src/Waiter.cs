@@ -11,14 +11,19 @@ public class Waiter
     
     private ArrayList assignedTables = new ArrayList();
 
+    public Waiter(string nombreMozo)
+    {
+        this.Nombre_mozo = nombreMozo;
+    }
+
     public void assign_table(Table table)
     {
-        String mesa_asignada = "";
-        for (int i = 0; i < Table.Count)
-        {
-            
-        }
+        assignedTables.Add(table);
     }
-    
+
+    public void TakeOrder(Table table, Dish dish)
+    {
+        table.AddToOrder(dish);
+    }
 }
 
