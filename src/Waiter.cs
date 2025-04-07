@@ -7,15 +7,22 @@ namespace Ucu.Poo.Restaurant;
 /// </summary>
 public class Waiter
 {
-    public string Nombre_mozo { get; set; }
+    public string Name { get; set; }
     
     private ArrayList assignedTables = new ArrayList();
+<<<<<<< HEAD
 
     public Waiter(string nombreMozo)
     {
         this.Nombre_mozo = nombreMozo;
     }
 
+=======
+    public Waiter(string name)
+    {
+        this.Name = name;
+    }
+>>>>>>> refs/remotes/origin/main
     public void assign_table(Table table)
     {
         assignedTables.Add(table);
@@ -25,5 +32,10 @@ public class Waiter
     {
         table.AddToOrder(dish);
     }
+<<<<<<< HEAD
 }
 
+=======
+    
+}
+>>>>>>> refs/remotes/origin/main
