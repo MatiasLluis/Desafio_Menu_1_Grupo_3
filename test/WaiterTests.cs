@@ -17,7 +17,7 @@ public class WaiterTests
     {
         Waiter waiter = new Waiter("Jane Doe");
         Table table = new Table(1);
-        waiter.AssignTable(table);
+        waiter.assign_table(table);
         Dish dish = new Dish("Salad", 5.99, true);
         table.Occupy();
         
