@@ -12,10 +12,8 @@ public class Dish
 
     public Dish (string Name, double Price, bool IsVegetarian)
     {
-        Name = Name; 
-        Price = Price;
-        IsVegetarian = IsVegetarian;
+        this.Name = Name; 
+        this.Price = Price;
+        this.IsVegetarian = IsVegetarian;
     }
-
-
 }
