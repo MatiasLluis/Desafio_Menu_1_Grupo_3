@@ -7,46 +7,35 @@ using System.Collections;
 /// </summary>
 public class Table
 {
+    private Order pedidos = new Order();
     public int Number { get; set; }
     public bool IsOccupied { get; set; }
-    public List<Dish> Order { get; private set; }
 
     public Table (int number)
     {
         this.Number = number;
         this.IsOccupied = false;
-        this.Order = new List<Dish>();
     }
 
     public void Occupy()
     {
         this.IsOccupied = true;
+        this.pedidos = new Order();
     }
 
     public void Free()
     {
         this.IsOccupied = false;
-        this.Order.Clear();
+        this.pedidos.order.Clear();
     }
 
     public void AddToOrder(Dish dish)
     {
-        this.Order.Add(dish);
+        this.pedidos.order.Add(dish);
     }
     
     public bool HasOrders()
     {
-        return this.Order.Count > 0;
-    }
-
-    public double GetTotal()
-    {
-        double total = 0;
-        foreach (var dish in Order)
-        {
-            total += dish.Price;
-        }
-
-        return total;
+        return this.pedidos.order.Count > 0;
     }
 }
